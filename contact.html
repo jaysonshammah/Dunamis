@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Dunamis Educational Centre</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="IMG-20230527-WA0049.jpg" class="logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Contact Us</h1>
+
+
+    </section>
+
+    <section class="location">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.816132289459!2d34.7574250734934!3d0.060005364366691134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x178009b6dfde3bdb%3A0x1ad8c463ab685e76!2sEDITH%20JUNIOR%20ACADEMY%20PRY%20SCH!5e0!3m2!1sen!2ske!4v1734959483818!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </section>
+
+    <section class="contact-us">
+        <div class="row">
+            <div class="contact-col">
+                <div>
+                    <i class="fa fa-home"></i>
+                    <span>
+                        <h5>Gisambai,Vihiga</h5>
+                        <p>Gisambai, Tiriki West, Kenya</p>
+                    </span>
+
+                </div>
+
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                    <span>
+                        <h5>0721443725</h5>
+                        <p>Monday to Friday, 8AM to 3PM</p>
+                    </span>
+
+            </div>
+            <div class="contact-col"></div>
+
+        </div>
+
+    </section>
+
+   
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>Dunamis Educational Centre is an integrated private educational institute in Gisambai, Tiriki West, Kenya.<br> This school is managed / sponsored by private individual</p>
+        <div class="icons">
+            <div class="social-media">
+                <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
+            </div>
+            
+
+        </div>
+    </section>
+
+
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
+    
+</body>
+</html>
