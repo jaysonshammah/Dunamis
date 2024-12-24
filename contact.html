@@ -68,14 +68,23 @@
     <section class="footer">
         <h4>About Us</h4>
         <p>Dunamis Educational Centre is an integrated private educational institute in Gisambai, Tiriki West, Kenya.<br> This school is managed / sponsored by private individual</p>
-        <div class="icons">
-            <div class="social-media">
-                <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
-                <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
-                <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
-            </div>
-            
+        <div class="social-media">
+            <!-- Facebook Icon with Actual Link -->
+            <a href="https://www.facebook.com/profile.php?id=61561462827810" target="_blank" class="social-icon">
+                <i class="fa fa-facebook"></i>
+            </a>
+            <!-- Instagram Icon Placeholder -->
+            <a href="#" onclick="comingSoon()" class="social-icon">
+                <i class="fa fa-instagram"></i>
+            </a>
+            <!-- LinkedIn Icon Placeholder -->
+            <a href="#" onclick="comingSoon()" class="social-icon">
+                <i class="fa fa-linkedin"></i>
+            </a>
 
+            <div id="coming-soon-message" class="coming-soon hidden">
+                <p>Coming Soon</p>
+            </div>
         </div>
     </section>
 
@@ -91,6 +100,25 @@
             navLinks.style.right = "-200px";
         }
     </script>
+
+<script>
+    const comingSoonMessage = document.getElementById("coming-soon-message");
+
+function showComingSoon() {
+    comingSoonMessage.classList.add("visible");
+    setTimeout(() => {
+        comingSoonMessage.classList.add("fade-out");
+        setTimeout(() => {
+            comingSoonMessage.classList.remove("visible", "fade-out");
+        }, 1500);
+    }, 2000);
+}
+
+document.querySelectorAll(".fa-instagram, .fa-linkedin").forEach(icon => {
+    icon.addEventListener("click", showComingSoon);
+});
+
+</script>
     
 </body>
 </html>

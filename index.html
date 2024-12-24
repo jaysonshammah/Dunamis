@@ -65,7 +65,7 @@
         <p>Dunamis Educational Centre is an integrated private educational institute in Gisambai, Tiriki West, Kenya.</p>
         <div class="social-media">
             <!-- Facebook Icon with Actual Link -->
-            <a href="https://www.facebook.com/" target="_blank" class="social-icon">
+            <a href="https://www.facebook.com/profile.php?id=61561462827810" target="_blank" class="social-icon">
                 <i class="fa fa-facebook"></i>
             </a>
             <!-- Instagram Icon Placeholder -->
@@ -76,6 +76,10 @@
             <a href="#" onclick="comingSoon()" class="social-icon">
                 <i class="fa fa-linkedin"></i>
             </a>
+
+            <div id="coming-soon-message" class="coming-soon hidden">
+                <p>Coming Soon</p>
+            </div>
         </div>
     </section>
     
@@ -94,10 +98,25 @@
     </script>
 
 <script>
-    function comingSoon() {
-        alert("Coming Soon!");
-    }
+   const comingSoonMessage = document.getElementById("coming-soon-message");
+
+function showComingSoon() {
+    comingSoonMessage.classList.add("visible");
+    setTimeout(() => {
+        comingSoonMessage.classList.add("fade-out");
+        setTimeout(() => {
+            comingSoonMessage.classList.remove("visible", "fade-out");
+        }, 1500);
+    }, 2000);
+}
+
+document.querySelectorAll(".fa-instagram, .fa-linkedin").forEach(icon => {
+    icon.addEventListener("click", showComingSoon);
+});
+
 </script>
+
+
     
 </body>
 </html>

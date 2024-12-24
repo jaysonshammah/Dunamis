@@ -25,6 +25,13 @@
     left: 0; /* Align to the left */
 }
 
+@media (max-width: 700px) {
+    .logo {
+        width: 70px; /* Resize the logo for smaller screens */
+    }
+}
+
+
 /* Style for the nav */
 nav {
     display: flex; /* Use Flexbox for layout */
@@ -228,11 +235,20 @@ nav .fa{
 .contact-us{
     width: 80%;
     margin-bottom: 30px;
+    padding: 50px 0;
+    text-align: left;
 }
 
 .contact-col{
-    flex-basis: 48%;
-    margin-bottom: 30px;
+    flex-basis: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+@media(min-width: 768px){
+    .contact-col{
+        flex-basis: 48%;
+    }
 }
 
 .contact-col div{
@@ -241,9 +257,9 @@ nav .fa{
     margin-bottom: 40px;
 }
 .contact-col div .fa{
-    font-size: 28px;
+    font-size: 24px;
     color: #f44336;
-    margin: 10px;
+    margin: 0 ;
     margin-right: 30px;
 }
 
@@ -276,6 +292,43 @@ nav .fa{
     color: #f44336; /* Change to desired hover color */
     transform: scale(1.2); /* Slightly enlarges the icon on hover */
 }
+
+/* Style for the Coming Soon message */
+.coming-soon {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    color: #fff; /* Text color */
+    padding: 20px 40px; /* Add padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 24px; /* Font size */
+    text-align: center; /* Center text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+    z-index: 1000; /* Ensure it's above other content */
+    display: none; /* Initially hidden */
+}
+
+/* Add a class to show the message */
+.coming-soon.visible {
+    display: block; /* Make it visible */
+}
+
+/* Style the fade-out animation */
+.coming-soon.fade-out {
+    animation: fadeOut 1.5s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
 
 
 
